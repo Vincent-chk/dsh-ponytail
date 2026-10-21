@@ -1,0 +1,46 @@
+{
+  "format": 1,
+  "title": {
+    "en": "Vincent-chk DSH plugins",
+    "zh": "Vincent-chk DSH 插件"
+  },
+  "plugins": [
+    {
+      "name": "@dsh-ext/dsh-ponytail",
+      "title": "Ponytail",
+      "description": {
+        "en": "Lazy senior dev mode: always-on smallest-complete-change rules and six ponytail skills, with no slash command - switch the bundle on and it applies; the level is a row setting.",
+        "zh": "「懒惰资深工程师」模式：常驻的最小完整改动规则与六个 ponytail 技能，无斜杠命令——打开 bundle 即生效；档位是行配置。"
+      },
+      "icon": "icon.svg",
+      "author": "Vincent-chk",
+      "homepage": "https://github.com/Vincent-chk/dsh-ponytail",
+      "repository": {
+        "url": "https://github.com/Vincent-chk/dsh-ponytail"
+      },
+      "metadata": {
+        "keywords": [
+          "ponytail",
+          "lazy",
+          "skill",
+          "bundle",
+          "prompt"
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "publishTimestamp": 1792550179,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/Vincent-chk/dsh-ponytail",
+            "commit": "cdb227a9de6a68357d2d591640268d0fe19d3eea"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.2 <0.3.0"
+          }
+        }
+      ]
+    }
+  ]
+}
