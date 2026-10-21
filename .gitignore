@@ -1,0 +1,4 @@
+# macOS AppleDouble companions: exFAT/dmg volumes create these next to every
+# file, and the Harness locale scanner rejects "._en.json" as a language file.
+._*
+.DS_Store

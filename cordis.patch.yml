@@ -1,0 +1,10 @@
+# Ponytail's own loader layer: one row for the dual-role package (bundle + host
+# plugin). Switching this bundle on is the only control a user needs: while it is
+# on, the rules are injected into every session. `config.defaultMode` picks the
+# level (off | lite | full | ultra; default full); `PONYTAIL_DEFAULT_MODE`
+# overrides it. There is no slash command and no state file.
+- insert:
+    - id: ponytail
+      name: '@dsh-ext/dsh-ponytail'
+      config:
+        defaultMode: full

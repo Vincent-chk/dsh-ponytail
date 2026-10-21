@@ -1,0 +1,65 @@
+{
+  "name": "@dsh-ext/dsh-ponytail",
+  "version": "0.1.0",
+  "description": "Ponytail (lazy senior dev mode) for DeepSeek Harness: always-on smallest-complete-change rules and six ponytail skills, with no slash command — switch the bundle on and it applies; the level is a row setting.",
+  "license": "MIT",
+  "author": "Vincent-chk",
+  "homepage": "https://github.com/Vincent-chk/dsh-ponytail#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vincent-chk/dsh-ponytail.git"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "dsh",
+    "deepseek-harness",
+    "ponytail",
+    "skill",
+    "bundle",
+    "prompt",
+    "lazy"
+  ],
+  "type": "module",
+  "main": "index.js",
+  "icon": "./icon.svg",
+  "exports": {
+    ".": "./index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "icon.svg",
+    "locale/*.json",
+    "assets/**/*.md",
+    "LICENSE",
+    "LICENSE.upstream",
+    "README.md",
+    "README.zh.md",
+    "UPSTREAM.md",
+    "test/selfcheck.mjs",
+    "test/bundle-check.mjs"
+  ],
+  "scripts": {
+    "test": "node test/selfcheck.mjs && node test/bundle-check.mjs",
+    "clean:macos": "find . -name '._*' -delete"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
