@@ -56,6 +56,12 @@ https://vincent-chk.github.io/dsh-ponytail/market/index.json
 `npm publish` is prepared in [PUBLISHING.md](PUBLISHING.md); the package is not
 on npm yet.
 
+> **Not the npm package named `dsh-ponytail`.** This bundle is
+> `@dsh-ext/dsh-ponytail` and installs from this repository or the index above.
+> An unrelated npm package uses the bare name `dsh-ponytail` and targets an old
+> DSH generation; installing it fails with a compatibility error (see
+> [Troubleshooting](#troubleshooting)).
+
 Toggling the bundle off in the Plugins page removes the rules and all six
 skills; toggling it back on restores them.
 
@@ -100,6 +106,20 @@ On macOS volumes that store extended attributes as AppleDouble files (exFAT,
 some network mounts), a write beside `locale/*.json` can leave a `._*.json`
 companion that the Harness locale reader rejects as a language file;
 `npm run clean:macos` removes them, and the self-check fails until it does.
+
+
+## Troubleshooting
+
+**`dsh-ponytail@0.2.0` is incompatible with DSH 0.2.1-rc.2 (requires
+`@deepseek-ai/dsh-agent`, `dsh-commands`, `dsh-llm`, `dsh-settings`, `dsh-skill`,
+`dsh-system-prompt` at `^0.1.0-rc.6`)**
+
+That message comes from the unrelated npm package `dsh-ponytail@0.2.0`
+(published 2026-08-15, built for DSH 0.1.0-rc.6), not from this bundle. Uninstall
+that package in Plugins, then install this repository instead:
+`github:Vincent-chk/dsh-ponytail`, the Git URL, or the market index above. This
+bundle declares no `@deepseek-ai/dsh-*` peer requirements and its
+`engines.dsh` is `>=0.2.1-rc.2 <0.3.0`.
 
 ## License
 

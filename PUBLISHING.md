@@ -33,6 +33,12 @@ is optional and needs an npm account.
 
 ## Publish to npm (optional, needs your npm account)
 
+**Never publish under the bare name `dsh-ponytail`.** npm already has an
+unrelated package with that name (`dsh-ponytail@0.2.0`, published 2026-08-15 and
+built for DSH 0.1.0-rc.6). Users who install it hit
+`incompatible with DSH 0.2.1-rc.2 (requirements @deepseek-ai/dsh-* ^0.1.0-rc.6)`.
+Publish under a scope you own so the two cannot be confused.
+
 The current package name uses the local `@dsh-ext` scope, which is not an npm
 scope you own. To publish:
 

@@ -48,6 +48,10 @@ https://vincent-chk.github.io/dsh-ponytail/market/index.json
 
 `npm publish` 的步骤已备好，见 [PUBLISHING.md](PUBLISHING.md)；当前尚未发布到 npm。
 
+> **不是 npm 上的 `dsh-ponytail` 包。** 本 bundle 的包名是
+> `@dsh-ext/dsh-ponytail`，只能从本仓库或上面的索引安装。npm 上有一个同名裸包
+> `dsh-ponytail`，面向旧版 DSH，安装它会报兼容性错误（见下文「常见问题」）。
+
 在 Plugins 页关掉 bundle 即移除规则与六个技能，重新打开即恢复。
 
 ## 切换档位
@@ -84,6 +88,18 @@ patch 变化会触发 HMR 重组合；若没生效，在 Plugins 页关/开一�
 在把扩展属性存成 AppleDouble 的 macOS 卷上（exFAT、部分网络盘），在
 `locale/*.json` 旁边写入可能留下 `._*.json` 伴生文件，Harness 的语言读取器会把它当成
 非法语言文件；`npm run clean:macos` 可清理，清理前自检会失败。
+
+
+## 常见问题
+
+**报错：`dsh-ponytail@0.2.0 与 DSH 0.2.1-rc.2 不兼容`（要求 `@deepseek-ai/dsh-agent`、
+`dsh-commands`、`dsh-llm`、`dsh-settings`、`dsh-skill`、`dsh-system-prompt` 为
+`^0.1.0-rc.6`）**
+
+这条报错来自 npm 上的另一个包 `dsh-ponytail@0.2.0`（2026-08-15 发布，面向 DSH
+0.1.0-rc.6），不是本 bundle。请在 Plugins 里卸载它，改从本仓库安装：
+`github:Vincent-chk/dsh-ponytail`、Git URL 或上面的市场索引。本 bundle 不声明任何
+`@deepseek-ai/dsh-*` peer 依赖，`engines.dsh` 为 `>=0.2.1-rc.2 <0.3.0`。
 
 ## 许可
 

@@ -1,7 +1,7 @@
 {
   "name": "@dsh-ext/dsh-ponytail",
-  "version": "0.1.0",
-  "description": "Ponytail (lazy senior dev mode) for DeepSeek Harness: always-on smallest-complete-change rules and six ponytail skills, with no slash command — switch the bundle on and it applies; the level is a row setting.",
+  "version": "0.1.1",
+  "description": "Ponytail (lazy senior dev mode) for DeepSeek Harness: always-on smallest-complete-change rules and six ponytail skills, with no slash command - switch the bundle on and it applies; the level is a row setting. Install from github.com/Vincent-chk/dsh-ponytail (not the unrelated npm package named dsh-ponytail).",
   "license": "MIT",
   "author": "Vincent-chk",
   "homepage": "https://github.com/Vincent-chk/dsh-ponytail#readme",
